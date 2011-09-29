@@ -16,13 +16,13 @@ The imageview_ex variable is a reference to the Module object.
 
 ## Reference
 
-### ___PROJECTNAMEASIDENTIFIER__.createImageView
+### imageview_ex.createImageView
 
 Create and return an instance of ComObscureImageview_exImageView.  Supports
 all of the properties of Ti.UI.ImageView, including the properties detailed
 below.
 
-### ___PROJECTNAMEASIDENTIFIER__.contentMode
+### imageview_ex.contentMode
 
 String representing the image scaling and fill mode.  Must be one of
 'aspectfit', 'aspectfill', or 'center'.
@@ -33,7 +33,7 @@ the view bounds, which means that an aspect filled image will be scaled down, th
 back up.  Adding the 'hires' property instructs Ti.UI.ImageView to scale to 2x
 of the view bounds, which is usually large enough to avoid an upscaling step.
 
-### ___PROJECTNAMEASIDENTIFIER__.clipsToBounds
+### imageview_ex.clipsToBounds
 
 Boolean.  If set to true, the loaded image will be clipped to the bounds of
 the view.  If false, the image extends beyond the view depending on the 
@@ -42,25 +42,26 @@ value of contentMode.
 
 ## Usage
 
-  var imageview_ex = require('com.obscure.imageview_ex');
-  var imageView = imageview_ex.createImageView({
-    top: 20,
-    left: 20,
-    height: 80,
-    width: 80,
-    hires: true,
-    contentMode: 'aspectfill',
-    clipsToBounds: true,
-    borderWidth: 1,
-    borderColor: 'red',
-    image: 'http://images2.wikia.nocookie.net/__cb20090714124530/firefly/images/1/11/Firefly_class_ship.jpg'
-  });
-  window.add(imageView);
+    var imageview_ex = require('com.obscure.imageview_ex');
+    var imageView = imageview_ex.createImageView({
+      top: 20,
+      left: 20,
+      height: 80,
+      width: 80,
+      hires: true,
+      contentMode: 'aspectfill',
+      clipsToBounds: true,
+      borderWidth: 1,
+      borderColor: 'red',
+      image: 'http://images2.wikia.nocookie.net/__cb20090714124530/firefly/images/1/11/Firefly_class_ship.jpg'
+    });
+    window.add(imageView);
   
 
 ## Author
 
 Paul Mietz Egli
+
 https://github.com/pegli
 
 ## License
